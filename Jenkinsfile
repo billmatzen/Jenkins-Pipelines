@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 'BVTController01'
-    }
-    
-  }
+  agent any
   stages {
     stage('Stage 1') {
       steps {
