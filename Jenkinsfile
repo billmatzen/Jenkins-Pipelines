@@ -23,18 +23,18 @@ pipeline {
     stage('Stage 2') {
       steps {
         parallel(
-          "Stage 2": {
+          "Stage 1 B": {
             build(job: 'VerifyAutomationScripts', wait: true)
             
           },
-          "": {
+          "Stage 2 B": {
             build 'SOAPStressTest'
             
           }
         )
       }
     }
-    stage('') {
+    stage('Stage 3') {
       steps {
         sleep 30
       }
